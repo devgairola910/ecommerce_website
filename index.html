@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VØID // ATELIER — Avant-Garde Luxury Streetwear & Technical Apparel</title>
+  <meta name="description" content="Curated luxury streetwear and high-concept technical garments. Heavyweight French terry, ballistic ripstop, and limited capsule drops. PoC E-Commerce showcase.">
+  <meta name="keywords" content="streetwear, luxury fashion, technical apparel, techwear, lookbook, atelier, capsule collection">
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="VØID // ATELIER — Avant-Garde Luxury Streetwear">
+  <meta property="og:description" content="Curated luxury streetwear and high-concept technical garments. Explore Drop 04.">
+  <meta property="og:image" content="assets/images/hero-lookbook.jpg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       ANNOUNCEMENT TICKER
+       ========================================================================== -->
+  <aside class="announcement-bar" id="announcementBar" aria-label="Announcement">
+    <div class="container announcement-inner">
+      <div class="announcement-text">
+        <span class="announcement-pill">FW26 RELEASE</span>
+        <span>Free express delivery worldwide on orders over $150 USD</span>
+        <span class="announcement-promo">CODE: <code>VOID10</code> FOR 10% OFF</span>
+      </div>
+      <div class="announcement-actions">
+        <div class="currency-select-wrapper">
+          <select id="currencySelect" aria-label="Select currency">
+            <option value="USD">USD ($)</option>
+            <option value="EUR">EUR (€)</option>
+            <option value="GBP">GBP (£)</option>
+            <option value="JPY">JPY (¥)</option>
+          </select>
+        </div>
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle visual theme" title="Toggle theme">
+          <span>🌓</span>
+          <span class="mono" style="font-size: 0.65rem;">THEME</span>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       MAIN NAVIGATION HEADER
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <div class="header-left">
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open mobile navigation">☰</button>
+        <nav aria-label="Main Navigation">
+          <ul class="nav-links">
+            <li><a href="#catalogSection" class="nav-link active">Collections</a></li>
+            <li><a href="#lookbookSection" class="nav-link">Drop 04 Lookbook</a></li>
+            <li><a href="#philosophySection" class="nav-link">Atelier Specs</a></li>
+            <li><a href="#vipSection" class="nav-link">VIP Access</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Center Typography Logo -->
+      <a href="#" class="brand-logo" aria-label="VØID ATELIER Homepage">
+        <span class="brand-text">VØID</span>
+        <span class="brand-sub">ATELIER // TOKYO</span>
+      </a>
+
+      <!-- Header Controls: Search, Wishlist, Cart -->
+      <div class="header-right">
+        <button class="header-btn" id="openSearchBtn" aria-label="Search garments">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <span class="search-shortcut-pill">⌘K</span>
+        </button>
+
+        <button class="header-btn" id="openWishlistBtn" aria-label="View saved garments" title="Wishlist">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+          <span class="badge-counter" id="wishlistCountBadge" style="display: none;">0</span>
+        </button>
+
+        <button class="header-btn" id="openCartBtn" aria-label="Open shopping bag" title="Shopping Bag">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="badge-counter" id="cartCountBadge" style="display: none;">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         HERO SECTION: EDITORIAL CAMPAIGN
+         ========================================================================== -->
+    <section class="hero-section" id="heroSection">
+      <div class="container">
+        <div class="hero-editorial-grid">
+          <div class="hero-banner-card">
+            <img src="assets/images/hero-lookbook.jpg" alt="Editorial Streetwear Campaign FW26" class="hero-bg-media">
+            <div class="hero-gradient-overlay"></div>
+            <div class="hero-content">
+              <div class="hero-badge-tag">
+                <span class="hero-pulse-dot"></span>
+                <span>FW26 CAPSULE // DROP 04 : CONCRETE GEOMETRY</span>
+              </div>
+              <h1 class="hero-title">
+                BRUTALIST ELEGANCE <span>FORGED IN SHADOW</span>
+              </h1>
+              <p class="hero-description">
+                Engineered silhouettes crafted with 480GSM French organic terry, Japanese waterproof ripstop, and aerospace-grade titanium hardware. Designed for the modern vanguard.
+              </p>
+              <div class="hero-actions">
+                <a href="#catalogSection" class="btn btn-primary" id="heroShopBtn">Explore Collection</a>
+                <a href="#lookbookSection" class="btn btn-secondary" id="heroLookbookBtn">Interactive Lookbook</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         INTERACTIVE "SHOP THE LOOK" LOOKBOOK
+         ========================================================================== -->
+    <section class="lookbook-section" id="lookbookSection">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-title-wrap">
+            <h2>01 // Interactive Lookbook</h2>
+            <div class="section-subtitle">Click the glowing pins on the garments to inspect pieces directly</div>
+          </div>
+          <span class="mono" style="font-size: 0.75rem; color: var(--accent-acid);">RUNWAY ATELIER SPEC</span>
+        </div>
+
+        <div class="lookbook-interactive-container" id="lookbookContainer">
+          <img src="assets/images/hero-lookbook.jpg" alt="FW26 Runway Lookbook with interactive garment tags" class="lookbook-image">
+          <!-- Dynamic hotspots rendered via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         PRODUCT CATALOG & CONTROLS
+         ========================================================================== -->
+    <section class="catalog-section" id="catalogSection">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-title-wrap">
+            <h2>02 // Garment Archive</h2>
+            <div class="section-subtitle">Drop 04 Essentials & Limited Editions</div>
+          </div>
+          <span class="mono" style="font-size: 0.75rem; color: var(--text-muted);">8 PIECES CATALOGUED</span>
+        </div>
+
+        <!-- Filter & Control Toolbar -->
+        <div class="catalog-controls">
+          <!-- Category Pills -->
+          <div class="category-pills-row" id="categoryPillsRow" role="tablist">
+            <button class="category-pill active" data-category="all">All Garments <span>8</span></button>
+            <button class="category-pill" data-category="outerwear">Outerwear <span>1</span></button>
+            <button class="category-pill" data-category="hoodies">Hoodies & Sweats <span>1</span></button>
+            <button class="category-pill" data-category="bottoms">Cargo & Bottoms <span>1</span></button>
+            <button class="category-pill" data-category="footwear">Footwear <span>1</span></button>
+            <button class="category-pill" data-category="tees">T-Shirts <span>1</span></button>
+            <button class="category-pill" data-category="accessories">Accessories <span>3</span></button>
+          </div>
+
+          <!-- Sub-Row: Size Filter, Price Range, Sort & Grid Views -->
+          <div class="filters-sub-row">
+            <div class="filter-group">
+              <!-- Sizing filter chips -->
+              <span class="mono" style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase;">Size:</span>
+              <div class="size-filter-chips">
+                <button class="size-chip active" data-size="all">ALL</button>
+                <button class="size-chip" data-size="S">S</button>
+                <button class="size-chip" data-size="M">M</button>
+                <button class="size-chip" data-size="L">L</button>
+                <button class="size-chip" data-size="XL">XL</button>
+              </div>
+
+              <!-- Price Slider -->
+              <div class="price-range-control">
+                <span>Max Price:</span>
+                <input type="range" id="priceRangeInput" min="50" max="400" step="10" value="400" aria-label="Filter maximum price">
+                <span id="priceRangeDisplay" style="color: var(--text-primary); font-weight: 700;">$400.00</span>
+              </div>
+            </div>
+
+            <div class="sort-and-view-group">
+              <!-- Sort Select -->
+              <select class="sort-select" id="sortSelect" aria-label="Sort garments">
+                <option value="featured">Featured Atelier Order</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="rating">Top Rated</option>
+                <option value="newest">Newest Drop First</option>
+              </select>
+
+              <!-- Grid View Toggle -->
+              <div class="grid-view-toggle">
+                <button class="view-btn" id="gridCol3Btn" title="3 Column Editorial Grid">3 COL</button>
+                <button class="view-btn active" id="gridCol4Btn" title="4 Column Compact Grid">4 COL</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Active Filter Chips Tag Bar -->
+        <div class="active-filter-tags" id="activeFilterTags"></div>
+
+        <!-- Dynamic Product Grid -->
+        <div class="product-grid" id="productGrid">
+          <!-- Populated by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         BRAND PHILOSOPHY & CRAFTSMANSHIP
+         ========================================================================== -->
+    <section class="philosophy-section" id="philosophySection">
+      <div class="container">
+        <div class="philosophy-grid">
+          <div class="philosophy-card">
+            <span class="philosophy-num">01 // TEXTILE ENGINEERING</span>
+            <h3>480GSM French Terry & CORDURA®</h3>
+            <p>Every piece is milled in Portugal and Japan using ultra-dense combed organic cotton and military-grade ballistic weave textiles built to endure lifetimes.</p>
+          </div>
+          <div class="philosophy-card">
+            <span class="philosophy-num">02 // ARCHITECTURAL FIT</span>
+            <h3>Sculptural Street Drapes</h3>
+            <p>Engineered drop shoulders, ergonomic articulated knee darts, and modular magnetic Fidlock hardware provide an avant-garde silhouette with maximum freedom.</p>
+          </div>
+          <div class="philosophy-card">
+            <span class="philosophy-num">03 // CARBON ARMORED DISPATCH</span>
+            <h3>Worldwide Express Logistics</h3>
+            <p>Orders are packaged in vacuum-sealed recycled carbon crates and dispatched through priority couriers with end-to-end telemetry and guaranteed delivery.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         VIP ATELIER ACCESS / NEWSLETTER
+         ========================================================================== -->
+    <section class="vip-section" id="vipSection">
+      <div class="container">
+        <div class="vip-card">
+          <span class="vip-badge">INNER CIRCLE ARCHIVE</span>
+          <h2>Unlock Secret Capsule Drops</h2>
+          <p>Join the private atelier roster to receive private release access 2 hours ahead of public release. Immediate 10% discount unlocked upon entry.</p>
+          <form class="vip-form" id="vipNewsletterForm">
+            <input type="email" class="vip-input" id="vipEmailInput" placeholder="Enter your email coordinates..." required>
+            <button type="submit" class="btn btn-primary" id="vipJoinBtn">Request Access</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       SITE FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>VØID // ATELIER</h4>
+          <p>Avant-garde technical fashion laboratory based in Shibuya, Tokyo with atelier studios in Berlin and New York.</p>
+          <div class="system-status-indicator">
+            <span class="status-dot"></span>
+            <span>ATELIER DISPATCH ENGINES ONLINE</span>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Collections</h5>
+          <ul class="footer-links">
+            <li><a href="#catalogSection">Drop 04 Capsule</a></li>
+            <li><a href="#catalogSection">Outerwear Systems</a></li>
+            <li><a href="#catalogSection">Modular Bottoms</a></li>
+            <li><a href="#catalogSection">Footwear Architecture</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Client Support</h5>
+          <ul class="footer-links">
+            <li><a href="#announcementBar">Global Shipping</a></li>
+            <li><a href="#announcementBar">Garment Care Guide</a></li>
+            <li><a href="#announcementBar">Returns & Exchanges</a></li>
+            <li><a href="#announcementBar">Authentication Codes</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Atelier Node</h5>
+          <ul class="footer-links">
+            <li><span class="mono">TOKYO // 35.6580° N, 139.7016° E</span></li>
+            <li><span class="mono">BERLIN // 52.5200° N, 13.4050° E</span></li>
+            <li><span class="mono">NYC // 40.7128° N, 74.0060° W</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 VØID ATELIER CO., LTD. ALL RIGHTS RESERVED.</span>
+        <span>E-COMMERCE PROOF OF CONCEPT FOR USER REVIEW</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       DRAWER: SLIDE-OUT CART
+       ========================================================================== -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+
+  <aside class="drawer" id="cartDrawer" aria-label="Shopping Cart Drawer">
+    <div class="drawer-header">
+      <div class="drawer-title">
+        <span>Your Archive Bag</span>
+      </div>
+      <button class="drawer-close-btn" id="closeCartBtn" aria-label="Close cart">✕</button>
+    </div>
+
+    <!-- Free Shipping Progress Tracker -->
+    <div class="shipping-bar-box">
+      <div class="shipping-bar-msg" id="shippingMsgText">
+        <span>Add $35 more for Free Shipping</span>
+        <span>82%</span>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill" id="shippingProgressBar" style="width: 82%;"></div>
+      </div>
+    </div>
+
+    <!-- Cart Item List Container -->
+    <div class="drawer-body" id="cartItemsList">
+      <!-- Populated dynamically via cart.js / app.js -->
+    </div>
+
+    <!-- Cart Footer & Promo Engine -->
+    <div class="drawer-footer">
+      <!-- Promo Code Input -->
+      <div class="promo-box">
+        <input type="text" class="promo-input" id="promoCodeInput" placeholder="PROMO (e.g. VOID10)">
+        <button class="promo-apply-btn" id="applyPromoBtn">Apply</button>
+      </div>
+
+      <!-- Active Promo Display -->
+      <div class="active-promo-tag" id="activePromoDisplay" style="display: none;"></div>
+
+      <div class="summary-rows">
+        <div class="summary-row">
+          <span>Subtotal</span>
+          <span id="cartSubtotal" class="mono">$0.00</span>
+        </div>
+        <div class="summary-row" id="cartDiscountRow" style="display: none; color: var(--accent-acid);">
+          <span>Atelier Discount</span>
+          <span id="cartDiscount" class="mono">-$0.00</span>
+        </div>
+        <div class="summary-row">
+          <span>Global Courier</span>
+          <span id="cartShipping" class="mono">$0.00</span>
+        </div>
+        <div class="summary-row total-row">
+          <strong>Total Amount</strong>
+          <strong id="cartTotal" class="mono" style="color: var(--accent-acid);">$0.00</strong>
+        </div>
+      </div>
+
+      <button class="checkout-btn" id="checkoutBtn">
+        Proceed To Checkout →
+      </button>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       DRAWER: WISHLIST DRAWER
+       ========================================================================== -->
+  <aside class="drawer" id="wishlistDrawer" aria-label="Wishlist Drawer">
+    <div class="drawer-header">
+      <div class="drawer-title">
+        <span>Saved Lookbook Archive</span>
+      </div>
+      <button class="drawer-close-btn" id="closeWishlistBtn" aria-label="Close saved items">✕</button>
+    </div>
+    <div class="drawer-body" id="wishlistItemsList">
+      <!-- Populated dynamically -->
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       MODAL: QUICK VIEW PRODUCT MODAL
+       ========================================================================== -->
+  <div class="modal-backdrop" id="quickviewBackdrop" aria-modal="true" role="dialog">
+    <div class="quickview-modal">
+      <button class="modal-close-btn" id="closeQuickviewBtn" aria-label="Close quick view">✕</button>
+      <div id="quickviewContent" style="display: contents;">
+        <!-- Populated via openQuickView() in app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL: MULTI-STEP CHECKOUT
+       ========================================================================== -->
+  <div class="modal-backdrop" id="checkoutBackdrop" aria-modal="true" role="dialog">
+    <div class="checkout-modal">
+      <div class="checkout-header">
+        <div class="checkout-steps-bar">
+          <div class="checkout-step active" id="step-indicator-1">
+            <span class="step-num">1</span>
+            <span>Address</span>
+          </div>
+          <div class="checkout-step" id="step-indicator-2">
+            <span class="step-num">2</span>
+            <span>Courier</span>
+          </div>
+          <div class="checkout-step" id="step-indicator-3">
+            <span class="step-num">3</span>
+            <span>Payment</span>
+          </div>
+          <div class="checkout-step" id="step-indicator-4">
+            <span class="step-num">4</span>
+            <span>Confirmed</span>
+          </div>
+        </div>
+        <button class="modal-close-btn" id="closeCheckoutBtn" aria-label="Close checkout" style="position: static;">✕</button>
+      </div>
+
+      <div class="checkout-body" id="checkoutStepContainer">
+        <!-- Rendered by renderCheckoutStep() -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL: SEARCH OVERLAY (⌘K)
+       ========================================================================== -->
+  <div class="modal-backdrop" id="searchBackdrop" aria-modal="true" role="dialog">
+    <div class="search-modal-wrap">
+      <div class="search-input-header">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" class="search-input-box" id="searchInput" placeholder="Search Drop 04 garments, textiles, silhouettes..." autofocus>
+        <button class="modal-close-btn" id="closeSearchBtn" style="position: static;" aria-label="Close search">✕</button>
+      </div>
+      <div class="search-results-list" id="searchResults">
+        <div style="padding: 1.5rem; text-align: center; color: var(--text-muted); font-size: 0.85rem;">
+          Type keywords like "Hoodie", "Cargo", "Gore-Tex", or "Runner"...
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       TOAST CONTAINER
+       ========================================================================== -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- Application Logic Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
